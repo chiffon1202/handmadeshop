@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Handmade Shop Online</title>
+		<meta charset='utf-8' http-equiv='content-type'/>
+		<link rel='stylesheet' href='style.css' type='text/css'>		
+	</head>
+	
+	<body>
+		<script type='text/javascript'>
+			        //change_image
+        var images = new Array();
+        var index = 0;
+        var max_image = 6;
+        for (index = 0; index <= max_image; index++) {
+            var i = index + 1;
+            images[index] = new Image;
+            images[index].src = 'img/new_goods/' + i + '.jpg';
+        }
+        function autochange() {
+            index++;
+            if (index >= max_image) index = 0;
+            document.getElementById('jpg').src = images[index].src;
+        }
+        var i = setInterval('autochange()', 3500);
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>	
+		<div id='line_slogan'>
+			<div id='slogan'>Handmade
+				<img alt='' src='img/head_img.jpg'>
+			</div>			
+			<div id='contact'>
+				<div>Tel : (+7)952-887-92-56 <br/>
+					 Email : chiffon1202@gmail.com
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id='body'>
+			<div id='header'>
+				<img src='img/img-head'/>
+				<a href='index.php'>Home</a>
+				<a href='aboutus.php'>About us</a>
+				<a href='gallery.php'>Gallery</a>
+				<a href='order.php'>Order</a>
+				<a href='address.php'>Contact</a>
+				<a href='admin.php'>Amin</a>
+			</div>
+			<img id='img_new' src='img/label_new_red.png' alt=''/>
+			<div class='list_goods'>
+				
+				<div id='new_goods'>
+					<img id='jpg' alt='' src='img/new_goods/1.jpg'>
+					<div id='new_goods_link'><a href='#'>New goods</a></div>		
+				</div>
+				<div id='top_order'>
+					<img alt='' src='img/8.jpg'/>
+					<div id='top_order_link'><a href='#'>Top order</a></div>
+				</div>
+				<div id='hit_goods'>
+					<img alt='' src='img/9.jpg'/>
+					<div id='hit_goods_link'><a href='#'>Hit goods</a></div>
+				</div>
+			</div>
+			</div>
+		<div id='bottom'>
+			<div id='website'>&#169;&#32chiff-handmade.com</div>
+			<div id='address'><a href='address.txt' alt=''>Our details address</div>		
+		</div>	
+	</body>
+</html>
